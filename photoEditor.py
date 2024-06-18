@@ -7,7 +7,7 @@ pathOut = './PyImgEd/edits'
 for filename in os.listdir(path):
     image = Image.open(f'{path}/{filename}')
 
-    edit = image.filter(ImageFilter.SHARPEN).convert('L')
+    edit = image.filter(ImageFilter.SHARPEN)
 
     cFactor = 1.4
     contrast = ImageEnhance.Contrast(edit)
